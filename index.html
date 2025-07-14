@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/pricing.css" />
+    <title>Frontend Mentor | Officelite coming soon site</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <img
+            class="logo"
+            src="./assets/shared/logo.svg"
+            alt="officelite logo"
+          />
+        </nav>
+      </header>
+      <main>
+        <div class="hero-section">
+          <img
+            class="hero-img"
+            src="./assets/home/illustration-charts.svg"
+            alt="illustration-charts"
+          />
+          <div class="hero-content">
+            <h1 class="title">
+              A simple solution to complex tasks is coming soon
+            </h1>
+            <p>
+              Say goodbye to inefficient juggling of multiple apps, teams, and
+              projects. Officelite is the new collaboration platform built with
+              an intuitive interface to improve productivity.
+            </p>
+            <button class="btn btn-main-cta btn-hero" type="button">
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <div class="pricing-section">
+          <article class="card">
+            <header>
+              <h2 class="pricing-plan">Basic</h2>
+              <div class="pricing-details">
+                <h3 class="price">Free</h3>
+                <p class="users">Up to 5 users for free</p>
+              </div>
+            </header>
+            <ul class="pricing-features">
+              <li>Basic document collaboration</li>
+              <li>2 gb storage</li>
+              <li>Great security and support</li>
+            </ul>
+            <button class="btn btn-plan-cta" type="button">Try for Free</button>
+          </article>
+          <article class="card selected">
+            <header>
+              <h2>Pro</h2>
+              <div class="pricing-details">
+                <h3 class="price">$9.99</h3>
+                <p class="users">Per user, billed monthly</p>
+              </div>
+            </header>
+            <ul class="pricing-features">
+              <li>All essential integrations</li>
+              <li>50 gb storage</li>
+              <li>More control and insights</li>
+            </ul>
+            <button class="btn btn-plan-cta" type="button">Try for Free</button>
+          </article>
+          <article class="card">
+            <header>
+              <h2>Ultimate</h2>
+              <div class="pricing-details">
+                <h3 class="price">$19.99</h3>
+                <p class="users">Per user, billed monthly</p>
+              </div>
+            </header>
+            <ul class="pricing-features">
+              <li>Robust work management</li>
+              <li>100 gb storage</li>
+              <li>VIP support</li>
+            </ul>
+            <button class="btn btn-plan-cta" type="button">Try for Free</button>
+          </article>
+        </div>
+
+        <footer>
+          <div class="countdown-section">
+            <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+            <div>
+              <p>Coming</p>
+              <p>4 Nov 2020</p>
+            </div>
+            <div>
+              <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+              47 Days 07 Hours 56 Min 14 Sec
+            </div>
+            <button class="btn btn-main" type="button">Get Started</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
