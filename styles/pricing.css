@@ -51,7 +51,18 @@
   color: var(--color-blue-500);
 }
 
-.selected {
+.card .btn-plan-cta:hover {
+  background-color: var(--color-blue-500);
+  color: var(--color-neutral-0);
+}
+
+.card .btn-plan-cta:focus {
+  /* background-color: var(--color-neutral-100); */
+  box-shadow: 0 0 0 3px var(--color-neutral-0), 0 0 0 5px var(--color-blue-500);
+  /* color: var(--color-blue-500); */
+}
+
+.card.selected {
   background-color: var(--color-blue-500);
 }
 
@@ -59,7 +70,16 @@
   color: var(--color-neutral-0);
 }
 
-.selected .btn-plan-cta {
+.card.selected .btn-plan-cta {
   background-color: var(--color-neutral-0);
   color: var(--color-blue-500);
+}
+
+.card.selected .btn-plan-cta:hover {
+  background-color: var(--color-neutral-100);
+}
+
+.card.selected .btn-plan-cta:focus {
+  background-color: var(--color-neutral-0);
+  box-shadow: 0 0 0 3px var(--color-blue-500), 0 0 0 5px var(--color-neutral-0);
 }

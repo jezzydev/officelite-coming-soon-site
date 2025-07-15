@@ -1,0 +1,146 @@
+.hero-section {
+  gap: 40px;
+}
+
+.countdown-content .text-coming {
+  color: var(--color-neutral-800);
+}
+
+.countdown-container .countdown-card {
+  background-color: var(--color-blue-100);
+}
+
+.countdown-card .num {
+  color: var(--color-blue-500);
+}
+
+.countdown-card .units {
+  color: var(--color-neutral-800);
+}
+
+/* form */
+.signup-form {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-neutral-0);
+  padding: 40px 20px;
+  box-shadow: 0 50px 50px -25px rgba(75, 92, 154, 16%);
+  display: grid;
+  gap: 40px;
+}
+
+.form-fields {
+  display: grid;
+  gap: 24px;
+}
+
+.field {
+  border: none;
+  border-bottom: 1px solid var(--color-neutral-500-50a);
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.field:hover {
+  border-color: var(--color-blue-500);
+}
+
+.field:focus-within {
+  box-shadow: 0 0 0 3px var(--color-neutral-0), 0 0 0 5px var(--color-blue-500);
+}
+
+.field input,
+.field select {
+  flex: auto;
+  height: 28px;
+  padding: 0px 16px;
+  font-size: 1rem;
+  color: var(--color-neutral-800);
+  outline: none;
+  border: none;
+}
+
+.field input::placeholder {
+  color: var(--color-neutral-500);
+  opacity: 0.7;
+  font-size: 1rem;
+  line-height: 28px;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+select {
+  align-items: center;
+  transition: 0.4s;
+}
+
+select::picker-icon {
+  transition: 0.4s rotate;
+}
+
+select::picker-icon:popover-open {
+  rotate: 180deg;
+}
+
+::picker(select) {
+  border: none;
+  top: calc(anchor(bottom) + 1px);
+}
+
+option {
+  border: 1px solid var(--color-neutral-500-50a);
+  padding: 8px 10px;
+}
+
+option,
+selectedcontent {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: var(--color-neutral-800);
+}
+
+option:checked {
+  color: var(--color-blue-500);
+  font-weight: 700;
+}
+
+option .option-price,
+selectedcontent .option-price {
+  opacity: 0.4;
+}
+
+option:first-of-type {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+option:last-of-type {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+
+option:hover,
+option:focus {
+  background-color: var(--color-blue-100);
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+}

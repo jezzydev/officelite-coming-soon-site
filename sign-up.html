@@ -1,36 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
+    <link rel="stylesheet" href="./styles/countdown.css" />
+    <link rel="stylesheet" href="./styles/sign-up.css" />
     <title>Frontend Mentor | Officelite coming soon site</title>
-</head>
-<body>
-  Work smarter. Save time.
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <img
+            class="logo"
+            src="./assets/shared/logo.svg"
+            alt="officelite logo"
+          />
+        </nav>
+      </header>
+      <main>
+        <div class="hero-section">
+          <div class="hero-content">
+            <h1 class="title">Work smarter. Save time.</h1>
+            <p>
+              Easily manage your projects. Get on the list and receive in-app
+              perks available only to early subscribers. We are moving into
+              final development and getting ready for official launch soon.
+            </p>
+          </div>
+          <div class="countdown-content">
+            <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+            <div class="text-content">
+              <span class="text-coming">Coming</span>
+              <span class="text-date">4 Nov 2020</span>
+            </div>
+            <div class="countdown-container">
+              <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+              <!-- 47 Days 07 Hours 56 Min 14 Sec -->
+              <span class="countdown-card days"
+                ><p class="num">00</p>
+                <p class="units">days</p></span
+              >
+              <span class="countdown-card hours"
+                ><p class="num">00</p>
+                <p class="units">hours</p></span
+              >
+              <span class="countdown-card minutes"
+                ><p class="num">00</p>
+                <p class="units">min</p></span
+              >
+              <span class="countdown-card seconds"
+                ><p class="num">00</p>
+                <p class="units">sec</p></span
+              >
+            </div>
+          </div>
+        </div>
+        <form class="signup-form" action="">
+          <div class="form-fields">
+            <div class="field">
+              <!-- <label for="fullname">Name</label> -->
+              <input
+                id="fullname"
+                name="fullname"
+                type="text"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="field">
+              <!-- <label for="email">Email Address</label> -->
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <select
+                id="package-select"
+                name="package-select"
+                class="package-select"
+              >
+                <button><selectedcontent></selectedcontent></button>
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
-
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
-</body>
+                <option value="basic" selected>
+                  <span class="option-name">Basic Pack</span>
+                  <span class="option-price">Free</span>
+                </option>
+                <option value="pro">
+                  <span class="option-name">Pro Pack</span>
+                  <span class="option-price">$9.99</span>
+                </option>
+                <option value="ultimate">
+                  <span class="option-name">Ultimate Pack</span>
+                  <span class="option-price">$19.99</span>
+                </option>
+              </select>
+            </div>
+            <div class="field">
+              <!-- <label for="phonenum">Phone Number</label> -->
+              <input
+                id="phonenum"
+                name="phonenum"
+                type="tel"
+                placeholder="Phone Number"
+              />
+            </div>
+            <div class="field">
+              <!-- <label for="company">Company</label> -->
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder="Company"
+              />
+            </div>
+          </div>
+          <button class="btn btn-main-cta" type="submit">
+            Get on the list
+          </button>
+        </form>
+      </main>
+    </div>
+    <script src="./scripts/app.js"></script>
+  </body>
 </html>

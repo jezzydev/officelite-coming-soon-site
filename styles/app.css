@@ -7,6 +7,7 @@
   --color-neutral-900: #25293a;
   --color-neutral-800: #333950;
   --color-neutral-500: #747b95;
+  --color-neutral-500-50a: rgba(116, 123, 149, 50%);
   --color-neutral-50: #fafafa;
   --color-neutral-0: #ffffff;
   --color-blue-500: #5175ff;
@@ -102,27 +103,6 @@ main {
   gap: 80px;
 }
 
-/* hero section */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-img {
-  max-width: 200px;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 24px;
-}
-
 .btn {
   width: 170px;
   height: 50px;
@@ -130,6 +110,8 @@ main {
   padding: 12px 40px;
   font-weight: 700;
   border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .btn-main-cta {
@@ -137,13 +119,19 @@ main {
   color: var(--color-neutral-0);
 }
 
-.btn-hero {
-  box-shadow: 0 25px 25px -10px rgba(63, 91, 194, 25%);
+.btn-main-cta:hover {
+  background-color: var(--color-blue-300);
 }
 
-/* footer */
+.btn-main-cta:focus {
+  box-shadow: 0 0 0 3px var(--color-neutral-0), 0 0 0 5px var(--color-blue-500);
+}
+
 footer {
-  background-color: transparent;
+  display: flex;
+  gap: 48px;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 575px) {
@@ -165,6 +153,10 @@ footer {
     flex-direction: row-reverse;
     gap: 63px;
     justify-content: space-between;
+  }
+
+  .hero-content {
+    align-items: start;
   }
 
   .hero-content > * {

@@ -17,7 +17,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/hero.css" />
     <link rel="stylesheet" href="./styles/pricing.css" />
+    <link rel="stylesheet" href="./styles/countdown.css" />
     <title>Frontend Mentor | Officelite coming soon site</title>
   </head>
   <body>
@@ -102,20 +104,45 @@
         </div>
 
         <footer>
-          <div class="countdown-section">
+          <div class="countdown-content">
             <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-            <div>
-              <p>Coming</p>
-              <p>4 Nov 2020</p>
+            <div class="text-content">
+              <span class="text-coming">Coming</span>
+              <span class="text-date">4 Nov 2020</span>
             </div>
-            <div>
+            <div class="countdown-container">
               <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-              47 Days 07 Hours 56 Min 14 Sec
+              <!-- 47 Days 07 Hours 56 Min 14 Sec -->
+              <span class="countdown-card days"
+                ><p class="num">00</p>
+                <p class="units">days</p></span
+              >
+              <span class="countdown-card hours"
+                ><p class="num">00</p>
+                <p class="units">hours</p></span
+              >
+              <span class="countdown-card minutes"
+                ><p class="num">00</p>
+                <p class="units">min</p></span
+              >
+              <span class="countdown-card seconds"
+                ><p class="num">00</p>
+                <p class="units">sec</p></span
+              >
             </div>
-            <button class="btn btn-main" type="button">Get Started</button>
           </div>
+          <button class="btn btn-main-cta" type="button">Get Started</button>
         </footer>
       </main>
     </div>
+    <script>
+      const buttons = document.querySelectorAll(".btn");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          window.location.href = "./sign-up.html";
+        });
+      });
+    </script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
