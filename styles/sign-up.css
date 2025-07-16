@@ -1,5 +1,23 @@
+body {
+  background: url(../assets/home/bg-pattern-footer.svg) center bottom -450px / 1200px
+      no-repeat,
+    linear-gradient(
+      to bottom,
+      var(--color-neutral-50) 0%,
+      var(--color-neutral-50) 73%,
+      var(--color-neutral-900) 73%,
+      var(--color-neutral-900) 100%
+    );
+}
+
 .hero-section {
   gap: 40px;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .countdown-content .text-coming {
@@ -20,6 +38,8 @@
 
 /* form */
 .signup-form {
+  width: 100%;
+  max-width: 445px;
   border: none;
   border-radius: 12px;
   background-color: var(--color-neutral-0);
@@ -143,4 +163,51 @@ option:focus {
 
 .btn {
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 64px 2.5rem 120px;
+  }
+
+  .signup-form {
+    padding: 40px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img {
+    max-width: 200px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background: url(../assets/home/bg-pattern-footer.svg) left 200px top -781px /
+        2036px no-repeat,
+      linear-gradient(
+        to right,
+        var(--color-neutral-50) 0%,
+        var(--color-neutral-50) 65%,
+        var(--color-neutral-900) 65%,
+        var(--color-neutral-900) 100%
+      );
+  }
+
+  main {
+    flex-direction: row;
+    gap: 125px;
+  }
 }

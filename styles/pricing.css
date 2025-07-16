@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 }
 
 .card {
@@ -15,12 +16,12 @@
   border-radius: 12px;
   padding: 40px 24px;
   gap: 48px;
-  justify-items: center;
+  width: 100%;
 }
 
 .card header {
-  text-align: center;
   grid-area: header;
+  justify-self: center;
 }
 
 .card .pricing-plan {
@@ -41,7 +42,13 @@
   grid-area: features;
   display: grid;
   gap: 16px;
+  justify-self: center;
+}
+
+.card * {
   text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 .card .btn-plan-cta {
@@ -49,6 +56,11 @@
   width: 171px;
   background-color: var(--color-blue-100);
   color: var(--color-blue-500);
+  justify-self: center;
+}
+
+.card:first-of-type {
+  box-shadow: 0 50px 50px -25px rgba(75, 92, 154, 24%);
 }
 
 .card .btn-plan-cta:hover {
@@ -57,9 +69,7 @@
 }
 
 .card .btn-plan-cta:focus {
-  /* background-color: var(--color-neutral-100); */
   box-shadow: 0 0 0 3px var(--color-neutral-0), 0 0 0 5px var(--color-blue-500);
-  /* color: var(--color-blue-500); */
 }
 
 .card.selected {
@@ -82,4 +92,65 @@
 .card.selected .btn-plan-cta:focus {
   background-color: var(--color-neutral-0);
   box-shadow: 0 0 0 3px var(--color-blue-500), 0 0 0 5px var(--color-neutral-0);
+}
+
+@media screen and (min-width: 575px) and (max-width: 1199px) {
+  .pricing-section {
+    gap: 20px;
+    max-width: 973px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-areas:
+      "header features"
+      "button features";
+    padding: 48px;
+    row-gap: 24px;
+  }
+
+  .card * {
+    text-align: left;
+    align-items: center;
+    align-content: center;
+  }
+
+  .card header,
+  .card .btn-plan-cta {
+    justify-self: start;
+  }
+
+  .card .pricing-features {
+    justify-self: end;
+  }
+
+  .card.selected {
+    background-image: url(../assets/home/bg-pattern-pricing.svg);
+    background-repeat: no-repeat;
+    background-size: 880px;
+    background-position-x: -335px;
+    background-position-y: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pricing-section {
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 349px;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .card:first-of-type {
+    box-shadow: none;
+  }
+
+  .card .pricing-plan {
+    margin-bottom: 40px;
+  }
 }

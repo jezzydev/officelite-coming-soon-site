@@ -1,4 +1,5 @@
 .countdown-content {
+  width: 100%;
   display: grid;
   gap: 20px;
   justify-items: center;
@@ -24,7 +25,7 @@
   gap: 16px;
 }
 
-.countdown-container .countdown-card {
+.countdown-card {
   display: block;
   width: 74px;
   border: none;
@@ -47,4 +48,21 @@
   font-weight: 700;
   opacity: 0.5;
   color: var(--color-neutral-0);
+}
+
+@media screen and (min-width: 768px) {
+  .countdown-card {
+    width: 100px;
+  }
+
+  .countdown-card .num {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .countdown-content {
+    width: auto;
+    justify-items: start;
+  }
 }
